@@ -1,0 +1,13 @@
+docker build -t docker_example .
+
+docker run -t -i docker_example /bin/bash
+
+docker ps -a
+
+docker-compose up
+
+docker-compose down
+
+docker ps
+
+docker inspect -f "{{ .Mounts }}" 9862
