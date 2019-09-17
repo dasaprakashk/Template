@@ -1,0 +1,9 @@
+version: '2'
+services:
+  docker_example:
+    image: docker_example:latest
+    volumes:
+      - ./models:/models
+    ports:
+      - "8080:8080"
+    command: gunicorn services.api.core.app:api -b :8080 --reload
